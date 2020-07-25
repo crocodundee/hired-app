@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="mt-3">
+	<p class="auth-title">Login</p>
+	<form method="POST">
+		{% csrf_token %}
+		{% for field in form %}
+			<div class="form-label" for="{{ field.id_for_label }}">{{ field.label }}</div>
+			{{ field }}
+			<div class="">{{ field.errors }}</div>
+		{% endfor %}
+		<input class="btn btn-primary" type="submit" value="Login"/>
+	</form>
+</div>
+{% endblock %}
