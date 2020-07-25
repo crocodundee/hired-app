@@ -1,12 +1,15 @@
-from django.db import models
 from django.contrib.auth import get_user_model
+from django.db import models
 
 
 class Skill(models.Model):
     """Applicant skill item"""
 
+    BEGGINER, MIDDLE, ADVANCED = 0, 1, 2
+    SKILL_LEVELS = ((BEGGINER, "Begginer"), (MIDDLE, "Middle"), (ADVANCED, "Advanced"))
+
     name = models.CharField(max_length=255, blank=False)
-    level = models.PositiveSmallIntegerField(max_value=10, blank=False)
+    level = models.CharField(max_length=8, choices=SKILL_LEVELS, blank=True)
 
     def __str__(self):
         """String representing of skill model"""
