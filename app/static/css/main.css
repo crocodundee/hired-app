@@ -1,3 +1,24 @@
 body{
-	background-color: aliceblue;
+	background-color: #f4f6ff;
+}
+
+.app-header{
+	display: flex;
+	justify-content: start;
+	top: 0;
+	padding: 1rem 2rem;
+	margin-bottom: 2rem;
+	background-color: #3282b8;
+}
+
+.app-label{
+	font-family: 'Dancing Script', cursive;
+	font-size: 24pt;
+	color: white;
+	rotate: -10deg;
+}
+
+.btn-primary{
+	background-color: #3282b8;
+	border-color: #3282b8;
 }
