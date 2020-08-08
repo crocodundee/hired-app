@@ -4,7 +4,8 @@ body{
 
 .app-header{
 	display: flex;
-	justify-content: start;
+	justify-content: space-between;
+	align-items: center;
 	top: 0;
 	padding: 1rem 2rem;
 	margin-bottom: 2rem;
@@ -21,4 +22,8 @@ body{
 .btn-primary{
 	background-color: #3282b8;
 	border-color: #3282b8;
+}
+
+.app-header-item{
+	margin-left: 0.6rem;
 }
