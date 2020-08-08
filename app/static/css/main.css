@@ -27,3 +27,50 @@ body{
 .app-header-item{
 	margin-left: 0.6rem;
 }
+
+.app-home{
+	display: flex;
+	justify-content: center;
+}
+
+.user-signup-steps{
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size: 18pt;
+	counter-reset: li; 
+	list-style: none; 
+	padding: 0;
+	text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+
+.user-step{
+	position: relative;
+	display: block;
+	padding: 2em 2em 2em 4em;
+	margin: .5em 0;
+	text-decoration: none;
+	transition: .3s ease-out;
+}
+
+.user-step:hover:before{
+	color: #d54062;
+	border-color: #d54062;
+}
+
+.user-step:before{
+	content: counter(li);
+	counter-increment: li;
+	position: absolute;
+	left: -1.3em;
+	top: 50%;
+	margin-top: -1.3em;
+	padding-top: 0.2rem;
+	height: 3em;
+	width: 3em;
+	line-height: 2em;
+	border: .3em solid #3282b8;
+	color: #3282b8;
+	text-align: center;
+	font-weight: bold;
+	border-radius: 2em;
+	transition: all .3s ease-out;
+}
