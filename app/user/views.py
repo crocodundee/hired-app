@@ -20,5 +20,4 @@ class UserLoginView(LoginView):
 class UserLogoutView(LogoutView):
     """User logout then login view"""
 
-    template_name = "/logout.html"
-    next_page = "user/login"
+    template_name = "user/logout.html"
