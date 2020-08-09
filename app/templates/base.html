@@ -15,6 +15,15 @@
 <body>
 	{% include 'header.html' %}
 	<div class="container">
+		<div class="d-flex justify-content-center">
+			<div class="col-sm-12 col-md-8 col-lg-6">
+				{% if messages %}
+					{% for message in messages %}
+						<div class="alert alert-success" role="alert">{{ message }}</div>
+					{% endfor %}
+				{% endif %}
+			</div>
+		</div>
 		{% block content %}
 		{% endblock %}
 	</div>
